@@ -17,21 +17,23 @@
       }
 
       .prompt {
-        font-size: 15px;
+        font-size: 24px; /* Increased font size for better readability */
         padding: 10px;
         text-align: center;
         margin-bottom: 15px;
         color: #9B9B9B;
+        max-width: 90%; /* Ensures the text doesn’t overflow on smaller screens */
       }
 
       .btn {
         background-color: lightgrey;
         border: none;
         border-radius: 15px;
-        font-size: 15px;
-        padding: 8px 20px;
+        font-size: 18px; /* Slightly larger button font size */
+        padding: 10px 25px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        margin-bottom: 15px; /* Adjust the space between button and prompt */
       }
 
       .btn:hover {
@@ -42,13 +44,13 @@
       /* Small screen adjustments */
       @media (max-width: 480px) {
         .prompt {
-          font-size: 20px;
+          font-size: 20px; /* Adjust font size for smaller screens */
           padding: 5px;
         }
 
         .btn {
-          font-size: 15px;
-          padding: 6px 15px;
+          font-size: 16px; /* Adjust button font size for smaller screens */
+          padding: 8px 18px;
         }
       }
     </style>
@@ -58,7 +60,7 @@
     <button class="btn">New Prompt</button>
   </body>
   <script>
-    const prompts = ["What does success mean to me, and has that definition changed over time?", "What are the things I fear most, and how do they influence the way I live my life?", "If I could go back and give my younger self one piece of advice, what would it be?", "What does happiness truly look like to me, and is it something I actively pursue or let come to me?", "What role does time play in my life, and how often do I feel I’m running out of it?", "How do I define 'meaning' in life, and do I feel like I’m living a meaningful life?", "What do I value most in others, and how do I express that in my relationships?", "When was the last time I felt truly present in the moment, and why was that significant?", "What does 'freedom' mean to me, and in what areas of my life do I feel most or least free?", "How do I balance the desire for comfort with the need for growth and challenge?", "What is the legacy I want to leave behind, and what steps am I taking to create it?", "What would I do if I wasn’t afraid of failing?", "How do I define love, and am I giving and receiving it in ways that feel true to me?", "What would happen if I stopped caring about what others think for one day?", "In what ways am I trying to control things that I cannot change?", "What do I believe is the purpose of life, and do I feel I am aligned with that purpose?", "How does my past shape the person I am today, and in what ways do I want to change that?", "What is the most important lesson I’ve learned in the past year?", "If I could change one thing about society, what would it be and why?", "What is my relationship with suffering, and how do I navigate pain or discomfort?", "What is something I’ve been avoiding, and why do I think that is?", "What are the things I am most grateful for that I rarely acknowledge?", "What does integrity mean to me, and how do I practice it daily?", "How much of my life is shaped by my own choices versus the choices of others?", "What do I believe happens after we die, and how does that belief impact my life?", "How do I cope with uncertainty, and is there a better way I could face the unknown?", "If I had only one year to live, what would I spend my time doing?", "What are the most important values I want to live by, and do my actions reflect those values?", "When was the last time I felt completely out of my comfort zone, and what did I learn from that?", "What do I want to be remembered for, and how can I live in alignment with that vision now?", "What would I do if I had no limitations, no boundaries, no fears?", "How do I approach the concept of 'failure,' and how can I change my perspective on it?", "What is the difference between living and merely existing, and how am I leaning into true living?", "What parts of myself am I still trying to accept, and how can I be more compassionate toward those parts?", "What role does creativity play in my life, and how can I embrace it more fully?", "How do I deal with disappointment, and what can I learn from those moments?", "What do I believe about destiny versus free will?", "How do I navigate guilt, and is there something I need to forgive myself for?", "When do I feel most at peace, and how can I cultivate more of that feeling?", "What does 'home' mean to me, and how do I create that sense of belonging in my life?", "How do I reconcile my dreams with the reality of my day-to-day life?", "If I were to let go of the need to be perfect, how would my life change?", "What is my greatest source of joy, and am I prioritizing it in my life?", "What do I want to learn before I die, and how can I start that journey now?", "If everything I’ve achieved were taken away from me, who would I be?", "What am I holding onto that is preventing me from moving forward?", "How do I measure personal growth, and what is the next step for me in that journey?", "What is the greatest contradiction in my life, and how do I navigate it?", "How does the idea of mortality influence the way I live my life?", "What is one thing I wish I had more time for, and how can I make more space for it?", ];
+    const prompts = ["What does success mean to me, and has that definition changed over time?", "What are the things I fear most, and how do they influence the way I live my life?", "If I could go back and give my younger self one piece of advice, what would it be?", "What does happiness truly look like to me, and is it something I actively pursue or let come to me?", "What role does time play in my life, and how often do I feel I’m running out of it?", "How do I define 'meaning' in life, and do I feel like I’m living a meaningful life?", "What do I value most in others, and how do I express that in my relationships?", "When was the last time I felt truly present in the moment, and why was that significant?", "What does 'freedom' mean to me, and in what areas of my life do I feel most or least free?", "How do I balance the desire for comfort with the need for growth and challenge?", "What is the legacy I want to leave behind, and what steps am I taking to create it?", "What would I do if I wasn’t afraid of failing?", "How do I define love, and am I giving and receiving it in ways that feel true to me?", "What would happen if I stopped caring about what others think for one day?", "In what ways am I trying to control things that I cannot change?", "What do I believe is the purpose of life, and do I feel I am aligned with that purpose?", "How does my past shape the person I am today, and in what ways do I want to change that?", "What is the most important lesson I’ve learned in the past year?", "If I could change one thing about society, what would it be and why?", "What is my relationship with suffering, and how do I navigate pain or discomfort?", "What is something I’ve been avoiding, and why do I think that is?", "What are the things I am most grateful for that I rarely acknowledge?", "What does integrity mean to me, and how do I practice it daily?", "How much of my life is shaped by my own choices versus the choices of others?", "What do I believe happens after we die, and how does that belief impact my life?", "How do I cope with uncertainty, and is there a better way I could face the unknown?", "If I had only one year to live, what would I spend my time doing?", "What are the most important values I want to live by, and do my actions reflect those values?", "When was the last time I felt completely out of my comfort zone, and what did I learn from that?", "What do I want to be remembered for, and how can I live in alignment with that vision now?", "What would I do if I had no limitations, no boundaries, no fears?", "How do I approach the concept of 'failure,' and how can I change my perspective on it?", "What is the difference between living and merely existing, and how am I leaning into true living?", "What parts of myself am I still trying to accept, and how can I be more compassionate toward those parts?", "What role does creativity play in my life, and how can I embrace it more fully?", "How do I deal with disappointment, and what can I learn from those moments?", "What do I believe about destiny versus free will?", "How do I navigate guilt, and is there something I need to forgive myself for?", "When do I feel most at peace, and how can I cultivate more of that feeling?", "What does 'home' mean to me, and how do I create that sense of belonging in my life?", "How do I reconcile my dreams with the reality of my day-to-day life?", "If I were to let go of the need to be perfect, how would my life change?", "What is my greatest source of joy, and am I prioritizing it in my life?", "What do I want to learn before I die, and how can I start that journey now?", "If everything I’ve achieved were taken away from me, who would I be?", "What am I holding onto that is preventing me from moving forward?", "How do I measure personal growth, and what is the next step for me in that journey?", "What is the greatest contradiction in my life, and how do I navigate it?", "How does the idea of mortality influence the way I live my life?", "What is one thing I wish I had more time for, and how can I make more space for it?"];
     const button = document.querySelector('.btn');
     const promptDiv = document.querySelector('.prompt');
     button.addEventListener('click', () => {
